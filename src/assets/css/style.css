@@ -106,7 +106,42 @@ header{
 	margin-top: -2px;
 	margin-right: 12px;
 }
+.menu .router-link-exact-active{
+	position: relative;
+}
+.menu .router-link-exact-active:before{
+	content: '';
+	height: 2px;
+	background-color: #E4032B;
+	width: 100%!important;
+	bottom: -5px;
+	left: 0;
+	position: absolute;
+}
+footer .router-link-exact-active:before{
+	display: none;
+}
 
+
+.mobile-menu{
+	position: absolute;
+	top: 70px;
+	left: 0;
+	background-color: #fff;
+	width: 100%;
+	padding: 30px 25px;
+}
+.mobile-menu ul{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+.mobile-menu li{
+	font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+}
 
 
 /*main*/

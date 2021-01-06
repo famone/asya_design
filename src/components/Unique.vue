@@ -12,7 +12,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-offset-4 col-lg-8 unique-box">
-					<img src="../assets/img/unique.png" class="unique">
+					<img src="../assets/img/unique.png" class="unique hidden-xs">
 					<div class="col-lg-8">
 						<p class="black-txt">
 						Наш клиент, мужчина средних лет, осуществил свою мечту и купил квартиру в районе метро «Стахановская».

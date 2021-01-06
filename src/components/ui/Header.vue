@@ -19,6 +19,13 @@
 				</div>
 			</div>
 		</div>
+		<div class="mobile-menu" v-if="acMenu">
+			<ul  @click="acMenu = false">
+				<router-link tag="li" :to="nav.link" v-for="nav in navigation">
+						{{nav.text}}
+					</router-link>
+			</ul>
+		</div>
 	</header>
 </template>
 
