@@ -586,11 +586,34 @@ td{
 	margin-bottom: 20px;
 }
 
+#loader{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 100px;
+}
+#loader img{
+	height: 50px;
+	animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
 
-
-
-
-
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+#p404{
+	min-height: calc(100vh - 297px);
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
 
 
 
@@ -636,7 +659,11 @@ td{
 
 
 /*ADAPTIIIIIIIIIV*/
-
+@media (min-width: 1200px){
+	.halfPage {
+	    width: 50%;
+	}
+}
 @media (min-width: 1200px){
 	.container {
 	    width: 1360px;

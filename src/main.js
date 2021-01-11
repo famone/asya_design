@@ -20,6 +20,7 @@ Vue.use(require('vue-cookies'))
 Vue.use(VueAwesomeSwiper)
 Vue.component('marquee-text', MarqueeText)
 Vue.use(VueScrollTo)
+Vue.use(VueTheMask)
 
 
 

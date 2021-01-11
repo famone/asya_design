@@ -4,38 +4,43 @@ import axios from 'axios'
 const proj = {
 	namespaced: true,
 	state: {
-		projects: [
-			{
-				title: 'Минималистичный дизайн квартиры для семьи с 3-мя детьми',
-				area: 80,
-				adress: 'Москва, ЖК Михайлова, 31',
-				time: '4 месяца, 2020 год',
-				budget: '4 000 000',
-				about: 'Наш клиент, мужчина средних лет, осуществил свою мечту и купил квартиру в районе метро «Стахановская».Он хотел оформить ее просто, но со вкусом — ему нравились интерьеры американских лофтов, минималистичность и простые современные цветовые гаммы. В итоге мы отремонтировали квартиру так, как он мечтал!',
-				plan: require('../assets/img/planimg.jpg'),
-				rooms: [
-					{
-						title: 'Спальня',
-						about: 'В спальне мы сделали акцентную стену в стиле лесной туманной дымки, которая создает ощущение расслабляющего успокаивающего интерьера. Клиент попросил оформить всю квартиру в нейтральных серых тонах, чтобы она выглядела максимально минималистично, но в антураже стиля лофт.',
-						imgs: [require('../assets/img/aboutas.png'), require('../assets/img/aboutas.png'), require('../assets/img/aboutas.png'), ]
-					},
-					{
-						title: 'Кухня',
-						about: 'В спальне мы сделали акцентную стену в стиле лесной туманной дымки, которая создает ощущение расслабляющего успокаивающего интерьера. Клиент попросил оформить всю квартиру в нейтральных серых тонах, чтобы она выглядела максимально минималистично, но в антураже стиля лофт.',
-						imgs: [require('../assets/img/aboutas.png'), require('../assets/img/aboutas.png'), require('../assets/img/aboutas.png'), ]
-					},
-				]
-			}
-		]
+		projects: null,
+		unique: null
   	},
 	mutations: {
-	
+		SET_PROJECTS(state, payload){
+			state.projects = payload
+		},
+		SET_UNIQUE(state, payload){
+			state.unique = payload
+		}
 	},
 	actions: {
-         
+         GET_PROJECTS({commit}){
+         	axios
+         	.get('http://asyadesign.ru/wp-json/ad/v1/get/projects')
+         	.then(res =>{
+         		commit('SET_PROJECTS', res.data)
+         	})
+         },
+         GET_UNIQUE({commit}){
+         	axios
+         	.get('http://asyadesign.ru/wp-json/ad/v1/get/osobennosti')
+         	.then(res =>{
+         		commit('SET_UNIQUE', res.data)
+         	})
+         }
 	},
 	getters: {
-
+		getProjects(state){
+			return state.projects
+		},
+		getSingleProj: (state) => (slug) => {
+  			return state.projects.find(projItem => projItem.slug == slug)
+  		},
+  		getUnique(state){
+  			return state.unique
+  		}
 	}
 }
 

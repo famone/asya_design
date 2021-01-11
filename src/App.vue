@@ -17,7 +17,12 @@ import Footer from './components/ui/Footer.vue'
 import axios from 'axios'
 
   export default{
-  	components: {Header, Footer}
+  	components: {Header, Footer},
+  	created(){
+  		this.$store.dispatch('proj/GET_PROJECTS')
+  		this.$store.dispatch('proj/GET_UNIQUE')
+  		
+  	}
   }
 </script>
 

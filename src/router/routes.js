@@ -5,6 +5,7 @@ import Projects from '../pages/Projects.vue'
 import Services from '../pages/Services.vue'
 import Contacts from '../pages/Contacts.vue'
 import ProjectPage from '../pages/ProjectPage.vue'
+import P404 from '../pages/P404.vue'
 
 
 const routes = [
@@ -31,6 +32,10 @@ const routes = [
 		{
 			path: '/projects/:id',
 			component: ProjectPage
+		},
+		{
+			path: '*',
+			component: P404
 		}
 	]
 

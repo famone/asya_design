@@ -4,13 +4,27 @@
 			<div class="col-lg-12">
 				<h2 class="col-wh">Особенности <span>работы</span></h2>
 			</div>
-			<div class="col-lg-3" v-for="item in 4"> 
+			<div class="col-lg-3" v-for="item in unique"> 
 				<div class="icon-box">
-					<img src="../assets/img/ic1.svg" alt="">
-					<h4>Многофакторное планирование</h4>
-					<p class="white-txt">Уделяем огромное внимание планированию на этапе подготовки - продумываем график работ, поставок, субподрядные работы, проектирование и согласования.</p>
+					<img :src="item.img" alt="">
+					<h4>{{item.name}}</h4>
+					<p class="white-txt" v-html="item.text"></p>
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
+
+
+
+
+<script>
+import {mapGetters} from 'vuex'
+	
+	export default{
+		computed: {
+			...mapGetters({ unique: "proj/getUnique"}),
+		}
+	}
+
+</script>

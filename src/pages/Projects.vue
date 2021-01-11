@@ -14,10 +14,16 @@
 		</section>
 
 
-		<section id="projects">
+
+
+		<section id="projects" v-if="projects">
 			<div class="row proj-row">
-				<projItem v-for="item in 8" />
+				<projItem v-for="item in projects" :projItem="item"/>
 			</div>
+		</section>
+
+		<section id="loader" v-else>
+			<img src="../assets/img/loader.svg" alt="">
 		</section>
 
 		<Contact />
@@ -29,8 +35,13 @@
 <script>
 import projItem from '../components/ui/projItem.vue'
 import Contact from '../components/Contact.vue'
+import {mapGetters} from 'vuex'
 
 	export default{
-		components: {projItem, Contact}
+		components: {projItem, Contact},
+		computed: {
+			...mapGetters({ projects: "proj/getProjects"}),
+		}
 	}
+	
 </script>

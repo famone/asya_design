@@ -18,9 +18,13 @@
 				<p class="bigger-txt">ЛУЧШИЕ</p>
 				<p class="big-txt ">ПРОЕКТЫ</p>
 			</div>
-			<div class="row proj-row">
-				<projItem v-for="item in 4" />
+			<div class="row proj-row" v-if="projects">
+				<projItem v-for="item in projects" :projItem="item"/>
+				
 			</div>
+			<section id="loader" v-else>
+			<img src="../assets/img/loader.svg" alt="">
+			</section>
 		</section>
 
 		<Unique />
@@ -35,6 +39,7 @@ import projItem from '../components/ui/projItem.vue'
 import Unique from '../components/Unique.vue'
 import Icons from '../components/Icons.vue'
 import Contact from '../components/Contact.vue'
+import {mapGetters} from 'vuex'
 
 	export default{
 		components: {projItem, Unique, Icons, Contact},
@@ -42,6 +47,9 @@ import Contact from '../components/Contact.vue'
 			return{
 				hoverPause: false
 			}
+		},
+		computed: {
+			...mapGetters({ projects: "proj/getProjects"}),
 		}
 	}
 </script>
