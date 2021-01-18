@@ -1,14 +1,35 @@
 <template>
 	<div>
 		<section id="main">
-			<img src="https://asyadesign.ru/wp-content/uploads/2019/02/architect-firm-05.jpg" class="main_start_img">
-			<div class="container">
+			<img src="https://asyadesign.ru/wp-content/uploads/2019/03/i48.jpg" class="main_start_img wow fadeInRight">
+			<div class="container wow fadeInUp">
 				<h1>ASYA DESIGN</h1>
 
-				<marquee-text  >
+				<h1 class="smaller"> Воплощение <br>
+					<span class="red">
+						<vue-typer
+			  :text='[ "самых смелых идей"]'
+			  :repeat='Infinity'
+			  :shuffle='true'
+			  initial-action='erasing'
+			  :pre-type-delay='70'
+			  :type-delay='70'
+			  :pre-erase-delay='2000'
+			  :erase-delay='30'
+			  erase-style='backspace'
+			  :erase-on-complete='false'
+			  caret-animation='blink'
+			>
+				
+			</vue-typer> <br>
+		</span>
+		в пространстве
+				</h1>
+
+				<!-- <marquee-text  >
 					<h1 class="running">Воплощение <span class="red">самых</span> смелых идей в 
 						<span class="red">пространстве</span>.</h1>
-				</marquee-text>
+				</marquee-text> -->
 				<p class="subheader">ИНТЕРЬЕРНОЕ ДИЗАЙН-БЮРО</p>		
 			</div>
 		</section>
@@ -16,8 +37,7 @@
 
 		<section id="projects">
 			<div class="container">
-				<p class="bigger-txt">ЛУЧШИЕ</p>
-				<p class="big-txt ">ПРОЕКТЫ</p>
+				<p class="bigger-txt wow fadeInRight">ПРОЕКТЫ</p>
 			</div>
 			<div class="row proj-row" v-if="projects">
 				<projItem v-for="item in projects" :projItem="item"/>

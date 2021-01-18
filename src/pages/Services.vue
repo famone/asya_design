@@ -5,10 +5,11 @@
 			<div class="container">
 				<h1>Интерьеры вне времени</h1>
 
-				<marquee-text  >
+			<!-- 	<marquee-text  >
 					<h1 class="running">Когда я <span class="red">создаю интерьер</span>, думаю о том, как он может меняться
 и быть <span class="red">актуальным  надолго</span>.</h1>
-				</marquee-text>
+				</marquee-text> -->
+				
 				<p class="subheader">ВИДЫ РАБОТ</p>		
 			</div>
 		</section>

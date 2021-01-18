@@ -4,7 +4,7 @@
 			<div class="col-lg-12">
 				<h2 class="col-wh">Особенности <span>работы</span></h2>
 			</div>
-			<div class="col-lg-3" v-for="item in unique"> 
+			<div class="col-lg-3 wow fadeInUp" v-for="item in unique"> 
 				<div class="icon-box">
 					<img :src="item.img" alt="">
 					<h4>{{item.name}}</h4>
