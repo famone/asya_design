@@ -4,10 +4,10 @@
 			<div class="container">
 				<h1>Ася Кон</h1>
 
-				<marquee-text  >
+				<!-- <marquee-text  >
 					<h1 class="running">Воплощение <span class="red">самых</span> смелых идей в 
 						<span class="red">пространстве</span>.</h1>
-				</marquee-text>
+				</marquee-text> -->
 				<p class="subheader">ОБО МНЕ</p>		
 			</div>
 		</section>

@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="col-lg-3 ma-20">
 				<router-link tag="a" to="/">
-					<img src="../../assets/img/logo.png" alt="" class="logo">
+					<img src="../../assets/img/footer_logo.png" alt="" class="logo">
 				</router-link>
 	 			<p class="small-white">Asya Design — архитектурно-дизайнерское бюро полного цикла. </p>
 			</div>

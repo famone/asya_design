@@ -9,7 +9,7 @@
 					<h1 class="running">Когда я <span class="red">создаю интерьер</span>, думаю о том, как он может меняться
 и быть <span class="red">актуальным  надолго</span>.</h1>
 				</marquee-text>
-				<p class="subheader">СЕРВИСЫ</p>		
+				<p class="subheader">ВИДЫ РАБОТ</p>		
 			</div>
 		</section>
 

@@ -5,10 +5,10 @@
 			<div class="container">
 				<h1>ASYA DESIGN</h1>
 
-				<marquee-text  >
+				<!-- <marquee-text  >
 					<h1 class="running">Воплощение <span class="red">самых</span> смелых идей в 
 						<span class="red">пространстве</span>.</h1>
-				</marquee-text>
+				</marquee-text> -->
 				<p class="subheader">ПРОЕКТЫ</p>		
 			</div>
 		</section>

@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<section id="main">
+			<img src="https://asyadesign.ru/wp-content/uploads/2019/02/architect-firm-05.jpg" class="main_start_img">
 			<div class="container">
 				<h1>ASYA DESIGN</h1>
 
