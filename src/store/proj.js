@@ -18,14 +18,14 @@ const proj = {
 	actions: {
          GET_PROJECTS({commit}){
          	axios
-         	.get('http://asyadesign.ru/wp-json/ad/v1/get/projects')
+         	.get('https://asyadesign.ru/wp-json/ad/v1/get/projects')
          	.then(res =>{
          		commit('SET_PROJECTS', res.data)
          	})
          },
          GET_UNIQUE({commit}){
          	axios
-         	.get('http://asyadesign.ru/wp-json/ad/v1/get/osobennosti')
+         	.get('https://asyadesign.ru/wp-json/ad/v1/get/osobennosti')
          	.then(res =>{
          		commit('SET_UNIQUE', res.data)
          	})

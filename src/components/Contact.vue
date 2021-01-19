@@ -68,7 +68,7 @@ import axios from 'axios'
 					};
 
 					axios
-	            	.post('http://asyadesign.ru/wp-json/contact-form-7/v1/contact-forms/211678/feedback', form2)
+	            	.post('https://asyadesign.ru/wp-json/contact-form-7/v1/contact-forms/211678/feedback', form2)
 	                .then((response) => {
 	                	console.log(response)
 	                    this.mesResult = response.data.message
